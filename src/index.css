@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+:root { color-scheme: dark; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #fff;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background:
+    radial-gradient(900px 500px at 8% -10%, rgba(99, 102, 241, 0.38), transparent 60%),
+    radial-gradient(800px 520px at 100% 0%, rgba(139, 92, 246, 0.32), transparent 60%),
+    radial-gradient(700px 600px at 50% 115%, rgba(37, 99, 235, 0.28), transparent 60%),
+    #070a23;
+  background-attachment: fixed;
+}
+
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+section, main > div { animation: rise 0.45s ease both; }
+section { transition: border-color 0.2s ease; }
+section:hover { border-color: rgba(167, 139, 250, 0.35); }
+
+select option { background: #151a4a; color: #fff; }
+input[type="date"] { color-scheme: dark; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
