@@ -53,7 +53,7 @@ export default function LocationCard({ email, onResult }) {
       {status === "done" && result && (
         <>
           <dl className="mt-5 grid grid-cols-2 gap-4 text-sm">
-            <div><dt className="text-blue-300/70">Nearest branch</dt><dd className="mt-0.5 text-white">{result.office.name}</dd></div>
+            <div><dt className="text-blue-300/70">Office branch</dt><dd className="mt-0.5 text-white">{result.office.name}</dd></div>
             <div><dt className="text-blue-300/70">Distance</dt><dd className="mt-0.5 text-white">{result.distanceKm.toFixed(2)} km</dd></div>
             <div><dt className="text-blue-300/70">Office Wi-Fi</dt><dd className="mt-0.5 text-white">{result.office.wifi || "—"}</dd></div>
             <div><dt className="text-blue-300/70">Allowed radius</dt><dd className="mt-0.5 text-white">{result.radiusKm.toFixed(1)} km</dd></div>
